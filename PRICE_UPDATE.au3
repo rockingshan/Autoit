@@ -21,69 +21,37 @@ EndFunc
 _AU3RecordSetup()
 #endregion --- Internal functions Au3Recorder End ---
 ;Local $oExcel2 = _ExcelBookNew()
-Run ("C:\Program Files (x86)\Notepad++\notepad++.exe")
-
 Local $oExcel = _ExcelBookOpen(@ScriptDir & '\564.xls', 0, 0)
-$i = 481
-While $i < 4485
-	_WinWaitActivate("Modify Customer — Mozilla Firefox","")
-	MouseClick("left",56,168,2)
+$i = 1
+While $i < 9
+	_WinWaitActivate("Operator Plan wise Price — Mozilla Firefox","")
+	MouseClick("left",1260,210,2)
 	Sleep(150)
-	Send("{CTRLDOWN}c{CTRLUP}")
-	Sleep(150)
-	$chkString = ClipGet()
-	If $chkString == "Modify " Then
-	ClipPut("")
 	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
-	$arr[$i][0]=$sCellValue
-	_WinWaitActivate("*new 1 - Notepad++","")
-	Send($arr[$i][0])
-	Send("{TAB}")
-	_WinWaitActivate("Modify Customer — Mozilla Firefox","")
-	Sleep(150)
-	MouseClick("left",264,240,2)
-	Sleep(200)
 	Send($sCellValue)
 	Sleep(250)
 	Send("{ENTER}")
-	Sleep(2500)
-	MouseClick("left",265,938,1)
-	Sleep(250)
-	Send("{CTRLDOWN}a{CTRLUP}{CTRLDOWN}c{CTRLUP}")
-	$arr[$i][1]=ClipGet()
-	_WinWaitActivate("*new 1 - Notepad++","")
-	Send($arr[$i][1])
-	Send("{TAB}")
-	_WinWaitActivate("Modify Customer — Mozilla Firefox","")
-	ClipPut("")
-	Sleep(200)
-	MouseClick("left",279,973,1)
-	Sleep(200)
-	Send("{CTRLDOWN}a{CTRLUP}{CTRLDOWN}c{CTRLUP}")
-	$arr[$i][2]=ClipGet()
-	_WinWaitActivate("*new 1 - Notepad++","")
-	Send($arr[$i][2])
-	Send("{TAB}")
-	_WinWaitActivate("Modify Customer — Mozilla Firefox","")
-	ClipPut("")
-	Sleep(150)
-	MouseClick("left",278,1010,1)
-	Sleep(150)
-	Send("{CTRLDOWN}a{CTRLUP}{CTRLDOWN}c{CTRLUP}")
-	$arr[$i][3]=ClipGet()
-	_WinWaitActivate("*new 1 - Notepad++","")
-	Send($arr[$i][3])
-	Send("{TAB}")
-	Send("{ENTER}")
-	;_WinWaitActivate("Modify Customer — Mozilla Firefox","")
-	ClipPut("")
-	Sleep(150)
-	
+	Sleep(2800)
+	;comment from here
+;~ 	MouseClick("left",365,239,1)
+;~ 	Sleep(250)
+;~ 	MouseClick("left",350,285,1)
+;~ 	Sleep(250)
+;~ 	MouseClick("left",1165,239,1)
+;~ 	Send("bronze{ENTER}")
+	;comment end here
+	MouseClick("left",1754,287,1)
+	Sleep(3050)
+	MouseClick("left",1770,407,1)
+	Sleep(3800)
+	MouseClick("left",1249,606,1)
+	Sleep(800)
+	MouseClick("left",1178,668,1)
+	Sleep(800)
+	MouseClick("left",1748,647,1)
+	Sleep(1500)
 	$i = $i +1
-Else
-	MouseClick("left",1840,197,1)
-	EndIf
-   WEnd
+	WEnd
 #endregion --- Au3Recorder generated code End ---
 ;_ExcelWriteSheetFromArray($oExcel2, $arr,1,1,0,0)
 While 1
