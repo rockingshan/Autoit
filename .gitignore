@@ -1,0 +1,15 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+Data/*.csv
+Data/*.xlsx
+Data/*.xlx
+Data/*.txt
+Output/*.csv
+Output/*.xlsx
+Output/*.xlx
+Output/*.zip
+*.csv
+*.xlsx
+*.xls

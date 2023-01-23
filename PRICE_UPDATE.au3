@@ -49,7 +49,7 @@ While $i < 9
 	MouseClick("left",1178,668,1)
 	Sleep(800)
 	MouseClick("left",1748,647,1)
-	Sleep(1500)
+	Sleep(3500)
 	$i = $i +1
 	WEnd
 #endregion --- Au3Recorder generated code End ---
