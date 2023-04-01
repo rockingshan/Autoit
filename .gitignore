@@ -11,5 +11,3 @@ Output/*.xlsx
 Output/*.xlx
 Output/*.zip
 *.csv
-*.xlsx
-*.xls
