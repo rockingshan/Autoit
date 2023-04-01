@@ -23,8 +23,8 @@ _AU3RecordSetup()
 ;Local $oExcel2 = _ExcelBookNew()
 Local $oExcel = _ExcelBookOpen(@ScriptDir & '\channel.xlsx', 0, 0)
 _WinWaitActivate("Basic Services - Google Chrome","")
-$i = 1
-While $i < 20
+$i = 50
+While $i < 88
 	;_WinWaitActivate("Basic Services - Google Chrome","")
 	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
 	$sCellValue1 = _ExcelReadCell($oExcel, $i, 2)
