@@ -21,10 +21,10 @@ EndFunc
 _AU3RecordSetup()
 #endregion --- Internal functions Au3Recorder End ---
 ;Local $oExcel2 = _ExcelBookNew()
-Local $oExcel = _ExcelBookOpen(@ScriptDir & '\channel_data_old.xlsx', 0, 0)
-_WinWaitActivate("basic_svc - Google Chrome","")
-$i = 40
-While $i < 87
+Local $oExcel = _ExcelBookOpen(@ScriptDir & '\channel.xlsx', 0, 0)
+_WinWaitActivate("Basic Services - Google Chrome","")
+$i = 1
+While $i < 20
 	;_WinWaitActivate("Basic Services - Google Chrome","")
 	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
 	$sCellValue1 = _ExcelReadCell($oExcel, $i, 2)
