@@ -21,24 +21,32 @@ EndFunc
 _AU3RecordSetup()
 #endregion --- Internal functions Au3Recorder End ---
 ;Local $oExcel2 = _ExcelBookNew()
-Local $oExcel = _ExcelBookOpen(@ScriptDir & '\123.xlsx', 0, 0)
-$i = 162
-While $i < 183
-	_WinWaitActivate("Channel — Mozilla Firefox","")
-	MouseClick("left",391,214,2)
-	Sleep(250)
-	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
-	$sCellValue1 = _ExcelReadCell($oExcel, $i, 2)
-	Send($sCellValue)
-	Sleep(500)
-	Send("{ENTER}")
-	Sleep(5500)
-	MouseClick("left",425,385,1)
-	MouseClick("left",411,433,1)
-	Sleep(500)	
-	MouseClick("left",1766,449,1)
-	Sleep(5500)
-	$i = $i +1
+Local $oExcel = _ExcelBookOpen(@ScriptDir & '\extend.xlsx', 0, 0)
+$i = 5
+While $i < 36
+_WinWaitActivate("Validity Extension - Google Chrome","")
+Sleep(300)
+MouseClick("left",314,312,1)
+Sleep(300)
+$sCellValue = _ExcelReadCell($oExcel, $i, 1)
+Send($sCellValue)
+Sleep(300)
+Send("{ENTER}")
+Sleep(3000)
+MouseClick("left",331,349,1)
+Sleep(300)
+Send("15{ENTER}")
+Sleep(300)
+MouseClick("left",1194,354,1)
+Sleep(300)
+Send("da{ENTER}")
+Sleep(300)
+MouseClick("left",1692,406,1)
+Sleep(4000)
+MouseClick("left",1828,404,1)
+Sleep(4000)
+$i = $i +1
+
 	WEnd
 #endregion --- Au3Recorder generated code End ---
 ;_ExcelWriteSheetFromArray($oExcel2, $arr,1,1,0,0)
@@ -64,4 +72,3 @@ Func ShowMessage()
     MsgBox(4096, "", "This is a message.")
 EndFunc   ;==>ShowMessage
 #endregion --- Au3Recorder generated code End ---
-	

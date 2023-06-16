@@ -23,11 +23,11 @@ _AU3RecordSetup()
 ;Local $oExcel2 = _ExcelBookNew()
 Local $oExcel = _ExcelBookOpen(@ScriptDir & '\card.xlsx', 0, 0)
 $i = 1
-While $i < 924
+While $i < 262
 	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
 	_WinWaitActivate("safe view SMS - admin console - lite version — Mozilla Firefox","")
 	MouseClick("left",55,272,1)
-	Sleep(1800)
+	Sleep(2200)
 MouseClick("left",401,323,1)
 Sleep(250)
 Send($sCellValue)
@@ -44,7 +44,7 @@ Sleep(250)
 Send("0.00")
 Sleep(250)
 MouseClick("left",1832,473,1)
-Sleep(1300)
+Sleep(2200)
 	$i = $i +1
 	WEnd
 #endregion --- Au3Recorder generated code End ---
@@ -71,4 +71,3 @@ Func ShowMessage()
     MsgBox(4096, "", "This is a message.")
 EndFunc   ;==>ShowMessage
 #endregion --- Au3Recorder generated code End ---
-	

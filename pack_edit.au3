@@ -22,20 +22,15 @@ _AU3RecordSetup()
 #endregion --- Internal functions Au3Recorder End ---
 ;Local $oExcel2 = _ExcelBookNew()
 Local $oExcel = _ExcelBookOpen(@ScriptDir & '\pack.xlsx', 0, 0)
-$i = 18
-While $i < 63
+$i = 1
+While $i < 37
 	_WinWaitActivate("Bouquet Channel Mapping — Mozilla Firefox","")
 	MouseClick("left",1818,318,1)
-	Sleep(4200)
+	Sleep(3000)
 	Send("{TAB}")
 	Sleep(200)
-	Send("{PGDN}")
-	Sleep(200)
-	Send("{PGDN}")
-	Sleep(200)
-	Send("{PGDN}")
-	Sleep(200)
-	Send("{PGDN}")
+	Send("{END}")
+	Sleep(350)
 	MouseClick("left",344,871,1)
 	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
 	Send($sCellValue)
@@ -43,7 +38,7 @@ While $i < 63
 	Send("{ENTER}")
 	Sleep(1500)
 	MouseClick("left",1715,939,1)
-	Sleep(3500)
+	Sleep(5000)
 	$i = $i +1
 	WEnd
 #endregion --- Au3Recorder generated code End ---
@@ -70,4 +65,3 @@ Func ShowMessage()
     MsgBox(4096, "", "This is a message.")
 EndFunc   ;==>ShowMessage
 #endregion --- Au3Recorder generated code End ---
-	
