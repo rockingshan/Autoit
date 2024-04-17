@@ -21,34 +21,19 @@ EndFunc
 _AU3RecordSetup()
 #endregion --- Internal functions Au3Recorder End ---
 ;Local $oExcel2 = _ExcelBookNew()
-Local $oExcel = _ExcelBookOpen(@ScriptDir & '\card.xlsx', 0, 0)
-$i = 500
-While $i < 600
+Local $oExcel = _ExcelBookOpen(@ScriptDir & '\nagra.xlsx', 0, 0)
+$i = 138
+While $i < 268
 	$sCellValue = _ExcelReadCell($oExcel, $i, 1)
-	_WinWaitActivate("safe view SMS - admin console - lite version — Mozilla Firefox","")
-	MouseClick("left",55,272,1)
-	Sleep(2200)
-	MouseClick("left",307,321,1)
+	Sleep(500)
+	;_WinWaitActivate("Operational Entity and 12 more pages - Personal - Microsoft? Edge","")
+	MouseClick("left",343,305,2)
 	Sleep(250)
-	Send("0424")
-MouseClick("left",401,323,1)
-Sleep(250)
-Send($sCellValue)
-Send("A56_23698")
-MouseClick("left",973,317,1)
-Sleep(250)
-Send($sCellValue)
-Sleep(250)
-MouseClick("left",1214,322,1)
-Sleep(250)
-Send($sCellValue)
-Sleep(250)
-MouseClick("left",1375,322,1)
-Sleep(250)
-Send("0.00")
-Sleep(250)
-MouseClick("left",1832,473,1)
-Sleep(2200)
+	Send($sCellValue)
+	Sleep(250)
+	Send("{ENTER}")
+	MouseClick("left",1686,424,1)
+	Sleep(1200)
 	$i = $i +1
 	WEnd
 #endregion --- Au3Recorder generated code End ---
