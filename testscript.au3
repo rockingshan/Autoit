@@ -1,0 +1,1 @@
+run("C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2422.7.0_x64__cv1g1gvanyjgm\whatsapp.exe")
